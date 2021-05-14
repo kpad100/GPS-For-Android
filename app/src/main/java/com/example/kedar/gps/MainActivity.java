@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     @Override
     public void onLocationChanged(Location location) {
         AsyncThread gpsThread = new AsyncThread();
-        gpsThread.execute("https://maps.googleapis.com/maps/api/geocode/json?latlng="+location.getLatitude()+","+location.getLongitude()+"&key=AIzaSyAj2lmW8r38-Syl0xCXN8UPSuB_sbUuJSs");
+        gpsThread.execute("https://maps.googleapis.com/maps/api/geocode/json?latlng="+location.getLatitude()+","+location.getLongitude()+"&key=YOUR_API_KEY_HERE");
         double lat = location.getLatitude();
         double lng = location.getLongitude();
         latitude.setText("Latitude: " + df.format(lat));
